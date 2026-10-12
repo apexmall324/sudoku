@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8f4">
+    <meta name="description" content="A calm, simple place to solve classic and jigsaw Sudoku puzzles.">
+    <title>Sudoku Studio — Play at your pace</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="layout.js" defer></script>
+</head>
+<body data-page="home">
+    <div id="site-header"></div>
+    <main>
+        <section class="hero page-width">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR DAILY MOMENT OF FOCUS</p>
+                <h1>A little logic.<br><span>A lot of calm.</span></h1>
+                <p class="hero-text">Make space for a satisfying puzzle. Play classic Sudoku or try a fresh twist with irregular regions.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="classic.html">Play classic <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="guide.html">How to play <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="hero-note"><span aria-hidden="true">✳</span> No timers. No pressure. Just you and the grid.</div>
+            </div>
+            <div class="hero-art" aria-label="Illustration of a Sudoku puzzle">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="floating-shape shape-one"></div>
+                <div class="floating-shape shape-two"></div>
+                <div class="mini-board" aria-hidden="true">
+                    <span>4</span><span></span><span>8</span><span></span><span>2</span><span></span><span>7</span><span></span><span>1</span>
+                    <span></span><span>2</span><span></span><span>6</span><span></span><span>9</span><span></span><span>4</span><span></span>
+                    <span>1</span><span></span><span>9</span><span></span><span>7</span><span></span><span>3</span><span></span><span>5</span>
+                    <span></span><span>8</span><span></span><span>3</span><span></span><span>4</span><span></span><span>1</span><span></span>
+                    <span>9</span><span></span><span>3</span><span></span><span>1</span><span></span><span>6</span><span></span><span>8</span>
+                    <span></span><span>1</span><span></span><span>9</span><span></span><span>8</span><span></span><span>3</span><span></span>
+                    <span>2</span><span></span><span>6</span><span></span><span>8</span><span></span><span>1</span><span></span><span>4</span>
+                    <span></span><span>4</span><span></span><span>1</span><span></span><span>7</span><span></span><span>6</span><span></span>
+                    <span>8</span><span></span><span>1</span><span></span><span>4</span><span></span><span>2</span><span></span><span>9</span>
+                </div>
+                <div class="art-caption"><span class="caption-icon">✦</span><span><strong>Your next good break</strong><small>One puzzle at a time</small></span></div>
+            </div>
+        </section>
+
+        <section class="page-width choose-section">
+            <div class="section-heading">
+                <div><p class="eyebrow">PICK YOUR PUZZLE</p><h2>Two ways to play</h2></div>
+                <p>Whether you're warming up or ready for a new challenge, there's a grid for you.</p>
+            </div>
+            <div class="game-cards">
+                <a class="game-card classic-card" href="classic.html">
+                    <div class="card-top"><span class="game-icon">▦</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+                    <p class="card-kicker">THE CLASSIC</p><h3>Sudoku</h3>
+                    <p>Fill every row, column, and 3×3 box with the numbers 1 to 9.</p>
+                    <span class="card-link">Start a classic puzzle <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="game-card jigsaw-card" href="jigsaw.html">
+                    <div class="card-top"><span class="game-icon">◈</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+                    <p class="card-kicker">A DIFFERENT SHAPE</p><h3>Jigsaw Sudoku</h3>
+                    <p>Same satisfying logic, with nine custom regions instead of square boxes.</p>
+                    <span class="card-link">Explore jigsaw <span aria-hidden="true">→</span></span>
+                </a>
+            </div>
+        </section>
+        <section class="closing-strip page-width">
+            <span class="closing-mark" aria-hidden="true">✳</span>
+            <p>New to Sudoku? <a href="guide.html">Our quick guide will get you started.</a></p>
+            <a class="strip-arrow" href="guide.html" aria-label="Read the Sudoku guide">→</a>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+</body>
+</html>

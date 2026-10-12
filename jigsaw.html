@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8f4">
+    <meta name="description" content="Create and solve a Jigsaw Sudoku puzzle with custom regions.">
+    <title>Jigsaw Sudoku — Sudoku Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="layout.js" defer></script>
+    <script src="sudoku-core.js" defer></script>
+    <script src="sudoku-board.js" defer></script>
+    <script src="jigsaw.js" defer></script>
+</head>
+<body data-page="jigsaw">
+    <div id="site-header"></div>
+    <main class="page-width play-page">
+        <div class="breadcrumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Jigsaw Sudoku</span></div>
+        <section class="play-heading">
+            <div><p class="eyebrow">A DIFFERENT SHAPE</p><h1>Jigsaw Sudoku</h1><p>Rows, columns, and nine custom regions. Same numbers, new shapes.</p></div>
+            <a class="small-help" href="guide.html#jigsaw">How regions work <span aria-hidden="true">→</span></a>
+        </section>
+        <section class="jigsaw-tabs" aria-label="Jigsaw Sudoku setup">
+            <button class="tab-button active" id="puzzle-tab-button" type="button" aria-selected="true">1. Enter puzzle</button>
+            <button class="tab-button" id="regions-tab-button" type="button" aria-selected="false">2. Define regions</button>
+        </section>
+        <section class="game-layout">
+            <div class="board-card">
+                <div id="puzzle-panel">
+                    <div class="board-toolbar"><span><span class="live-dot"></span> YOUR PUZZLE</span><button id="example-button" class="quiet-button" type="button">Set up sample</button></div>
+                    <div class="board-wrap"><div class="sudoku-grid jigsaw-grid" id="sudokuGrid" aria-label="Jigsaw Sudoku puzzle grid"></div></div>
+                    <div class="board-actions">
+                        <button class="button button-secondary hint-button" id="hint-button" type="button">Hint (2 left) <span aria-hidden="true">✦</span></button>
+                        <button class="button button-primary" id="solve-button" type="button">Solve puzzle <span aria-hidden="true">→</span></button>
+                        <button class="button button-secondary" id="clear-button" type="button">Clear grid</button>
+                    </div>
+                    <p id="result" class="result" role="status" aria-live="polite"></p>
+                </div>
+                <div id="regions-panel" hidden>
+                    <div class="board-toolbar"><span><span class="live-dot"></span> REGION EDITOR</span><button id="standard-regions-button" class="quiet-button" type="button">Use 3×3 boxes</button></div>
+                    <p class="panel-intro">Tap a number to cycle through regions 1–9. Each region needs exactly nine cells.</p>
+                    <div class="board-wrap"><div class="sudoku-grid region-grid" id="regionGrid" aria-label="Jigsaw region editor"></div></div>
+                    <div class="region-legend" id="regionLegend" aria-label="Region color key"></div>
+                    <div class="board-actions">
+                        <button class="button button-primary" id="confirm-regions-button" type="button">Save regions <span aria-hidden="true">→</span></button>
+                        <button class="button button-secondary" id="load-region-example-button" type="button">Load sample regions</button>
+                    </div>
+                    <p id="region-result" class="result" role="status" aria-live="polite"></p>
+                </div>
+            </div>
+            <aside class="side-note">
+                <span class="side-note-icon" aria-hidden="true">◈</span>
+                <p class="eyebrow">THE TWIST</p>
+                <h2>Trade the boxes for shapes.</h2>
+                <p>Every row, column, and colored region must contain each number from 1 to 9 exactly once. Start with the sample or map your own regions.</p>
+                <a href="guide.html#jigsaw">Learn about Jigsaw Sudoku <span aria-hidden="true">→</span></a>
+            </aside>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+</body>
+</html>

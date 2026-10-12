@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8f4">
+    <meta name="description" content="Play and solve a classic 9 by 9 Sudoku puzzle.">
+    <title>Classic Sudoku — Sudoku Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="layout.js" defer></script>
+    <script src="sudoku-core.js" defer></script>
+    <script src="sudoku-levels.js" defer></script>
+    <script src="sudoku-board.js" defer></script>
+    <script src="classic.js" defer></script>
+</head>
+<body data-page="classic">
+    <div id="site-header"></div>
+    <main class="page-width play-page">
+        <div class="breadcrumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Classic Sudoku</span></div>
+        <section class="play-heading">
+            <div><p class="eyebrow">THE CLASSIC</p><h1>Sudoku</h1><p>Fill each row, column, and box with the numbers 1 to 9.</p></div>
+            <a class="small-help" href="guide.html">Need a refresher? <span aria-hidden="true">→</span></a>
+        </section>
+        <section class="game-layout">
+            <div class="board-card">
+                <div class="board-toolbar">
+                    <div class="puzzle-label">
+                        <span><span class="live-dot"></span> YOUR PUZZLE</span>
+                        <p>Enter your digits and let the solver do the rest.</p>
+                    </div>
+                    <div class="level-loader">
+                        <label class="sr-only" for="level-select">Choose puzzle level</label>
+                        <select id="level-select" class="level-select">
+                            <option value="">Choose a level</option>
+                        </select>
+                        <button id="load-level-button" class="quiet-button" type="button">Load game</button>
+                    </div>
+                </div>
+                <div class="board-wrap"><div class="sudoku-grid classic-grid" id="sudokuGrid" aria-label="Sudoku puzzle grid"></div></div>
+                <div class="board-actions">
+                    <button class="button button-secondary hint-button" id="hint-button" type="button">Hint (2 left) <span aria-hidden="true">✦</span></button>
+                    <button class="button button-primary" id="solve-button" type="button">Solve puzzle <span aria-hidden="true">→</span></button>
+                    <button class="button button-secondary" id="clear-button" type="button">Clear grid</button>
+                </div>
+                <p id="result" class="result" role="status" aria-live="polite"></p>
+            </div>
+            <aside class="side-note">
+                <span class="side-note-icon" aria-hidden="true">✦</span>
+                <p class="eyebrow">A GENTLE REMINDER</p>
+                <h2>Take it one cell at a time.</h2>
+                <p>Enter the clues you have, then let the solver take care of the rest. Given numbers stay dark; solved cells appear in green.</p>
+                <a href="guide.html">Read the quick guide <span aria-hidden="true">→</span></a>
+            </aside>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+</body>
+</html>
